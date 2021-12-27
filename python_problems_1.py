@@ -1,6 +1,6 @@
-#Write a function
+# Write a function
 
-#https://www.hackerrank.com/challenges/write-a-function/
+# https://www.hackerrank.com/challenges/write-a-function/
 
 # In the Gregorian calendar, three conditions are used to identify leap years:
 
@@ -34,9 +34,9 @@ def is_leap(year):
 year = int(input())
 print(is_leap(year))
 
-#List Comprehensions
+# List Comprehensions
 
-#https://www.hackerrank.com/challenges/list-comprehensions
+# https://www.hackerrank.com/challenges/list-comprehensions
 
 # You are given three integers and representing the dimensions of a cuboid along with an integer . Print a list of all possible coordinates given by  on a 3D grid where the sum of is not equal to . Here, . Please use list comprehensions rather than multiple loops, as a learning exercise.
 
@@ -70,3 +70,33 @@ if __name__ == '__main__':
                 if i+j+k != n:
                     list.append([i, j, k])
     print(list)
+
+# Find the Runner-Up Score!
+
+# https: // www.hackerrank.com/challenges/find-second-maximum-number-in-a-list
+
+
+# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given  scores. Store them in a list and find the score of the runner-up.
+
+# Input Format
+
+# The first line contains . The second line contains an array   of  integers each separated by a space.
+
+# Constraints
+
+# Output Format
+
+# Print the runner-up score.
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    sorted = sorted(arr)
+    index = int(n)-1
+    for i in range(n):
+        if sorted[index] == sorted[index-i]:
+            a = sorted[(index-1)-i]
+    print(a)
+
+
