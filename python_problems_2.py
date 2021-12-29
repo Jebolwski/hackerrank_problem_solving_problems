@@ -97,3 +97,22 @@ if __name__ == '__main__':
     n = int(input())
     integer_list = tuple(map(int, input().split()))
     print(hash(integer_list))
+
+
+# Mutations
+
+# https: // www.hackerrank.com/challenges/python-mutations
+
+# We have seen that lists are mutable(they can be changed), and tuples are immutable(they cannot be changed).
+
+# Let's try to understand this with an example.
+
+# You are given an immutable string, and you want to make changes to it.
+
+def mutate_string(string, position, character):
+    string = list(string)
+    string[position] = character
+    result = ""
+    for i in string:
+        result += i
+    return result
