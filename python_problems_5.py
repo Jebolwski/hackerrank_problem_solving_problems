@@ -47,3 +47,27 @@ def miniMaxSum(arr):
     min = arr[0]+arr[1]+arr[2]+arr[3]
     max = arr[1]+arr[2]+arr[3]+arr[4]
     print(min, max)
+
+
+# https: // www.hackerrank.com/challenges/birthday-cake-candles
+
+    def birthdayCakeCandles(candles):
+    count = 0
+    for i in range(len(candles)):
+        if max(candles) == candles[i]:
+            count = count+1
+    return count
+
+
+# https: // www.hackerrank.com/challenges/grading/
+
+    def gradingStudents(grades):
+    res = []
+    for grade in grades:
+        if grade >= 38:
+            modul = grade % 5
+
+            if modul >= 3:
+                grade += (5-modul)
+        res.append(grade)
+    return res
