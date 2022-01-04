@@ -18,3 +18,37 @@ def getTotalX(a, b):
         if potential.count(number) == totallen:
             final.append(number)
     return len(set(final))
+
+
+# https: // www.hackerrank.com/challenges/breaking-best-and-worst-records
+
+
+    def breakingRecords(scores):
+    array = []
+    highest = 0
+    lowest = 0
+
+    for score in scores:
+        array.append(score)
+    temp = array[0]
+    for score in scores:
+        if temp < score:
+            temp = score
+            highest = highest+1
+    temp = array[0]
+    for score in scores:
+        if temp > score:
+            temp = score
+            lowest = lowest+1
+    return highest, lowest
+
+
+# https: // www.hackerrank.com/challenges/the-birthday-bar
+
+
+    def birthday(s, d, m):
+    count = 0
+    for i in range(len(s)):
+        if sum(s[i:i+m]) == d:
+            count = count+1
+    return count
