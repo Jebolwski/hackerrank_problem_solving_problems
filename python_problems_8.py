@@ -39,7 +39,10 @@ def migratoryBirds(arr):
         return 5
 
 
-        def dayOfProgrammer(year):
+# https: // www.hackerrank.com/challenges/day-of-the-programmer
+
+     
+    def dayOfProgrammer(year):
 
     if (1699 < year < 1918):
         if (year % 4 == 0):
@@ -48,9 +51,6 @@ def migratoryBirds(arr):
         else:
             a = "13.09."+str(year)
             return a
-
-
-# https: // www.hackerrank.com/challenges/day-of-the-programmer
 
     if (1917 < year < 1919):
         if (year % 4 == 0):
