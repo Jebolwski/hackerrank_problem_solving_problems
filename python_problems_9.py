@@ -11,11 +11,11 @@ def bonAppetit(bill, k, b):
 
 # https://www.hackerrank.com/challenges/sock-merchant
 
-        def sockMerchant(n, ar):
-    s = 0
-    for a in Counter(ar).values():
-        s=s+int(a)//2
-    return s
+    def sockMerchant(n, ar):
+        s = 0
+        for a in Counter(ar).values():
+            s=s+int(a)//2
+        return s
 
 # https://www.hackerrank.com/challenges/drawing-book
     
@@ -39,14 +39,14 @@ def bonAppetit(bill, k, b):
 # https://www.hackerrank.com/challenges/counting-valleys
 
     def countingValleys(steps, path):
-    count=0
-    level=0
-    result=0
-    for i in path:
-        if i=="U":
-            count=count+1
-        else:
-            count=count-1
-        if count==0 and i=="U":
-            result=result+1
-    return result
+        count=0
+        level=0
+        result=0
+        for i in path:
+            if i=="U":
+                count=count+1
+            else:
+                count=count-1
+            if count==0 and i=="U":
+                result=result+1
+        return result
