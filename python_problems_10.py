@@ -57,3 +57,15 @@ def getMoneySpent(keyboards, drives, b):
                 diff = diff+abs(i-j)
             minimumcost = min(minimumcost,diff)
         return minimumcost
+
+
+# https://www.hackerrank.com/challenges/picking-numbers
+
+    from collections import Counter
+    def pickingNumbers(a):
+        arr = Counter(a)
+        maxnum = 2
+
+        for i in range(100):
+            maxnum = max(maxnum,arr[i]+arr[i+1])
+        return maxnum
