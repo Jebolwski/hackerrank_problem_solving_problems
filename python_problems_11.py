@@ -41,3 +41,27 @@ def hurdleRace(k, height):
             else:
                 height=height*2 
         return height
+
+# https://www.hackerrank.com/challenges/beautiful-days-at-the-movies
+
+    def angryProfessor(k, a):
+        count_early=0
+        count_late=0
+        for i in a:
+            if i<=0:
+                count_early=count_early+1
+        if count_early>=k:
+            return "NO"
+        else:
+            return "YES"   
+
+
+# https://www.hackerrank.com/challenges/beautiful-days-at-the-movies
+
+    def beautifulDays(i, j, k):
+        count=0
+        for x in range(i,j+1):
+            r_x=int(str(x)[::-1])
+            if abs(r_x-x)%k==0:
+                count=count+1
+        return count
