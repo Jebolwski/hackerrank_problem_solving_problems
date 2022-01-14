@@ -65,3 +65,32 @@ def hurdleRace(k, height):
             if abs(r_x-x)%k==0:
                 count=count+1
         return count
+
+# https://www.hackerrank.com/challenges/strange-advertising/
+
+    def viralAdvertising(n):
+        shared = 5
+        total_like=0
+        for i in range(n):
+            like =shared//2
+            total_like=total_like+like
+            shared = like *3
+        return total_like
+
+# https://www.hackerrank.com/challenges/save-the-prisoner/
+
+    def saveThePrisoner(n, m, s):
+        # array=[]
+        # s=s-1
+        # for i in range(0,m):
+        #     s=s+1
+        #     array.append(s)
+        #     if s==n:
+        #         s=0
+        # return array[len(array)-1]
+
+        res = s+m-1
+        res%=n
+        if res==0:
+            return n
+        return res
