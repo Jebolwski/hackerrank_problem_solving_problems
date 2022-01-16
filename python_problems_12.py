@@ -1,7 +1,7 @@
 
 # https://www.hackerrank.com/challenges/circular-array-rotation
 
-def circularArrayRotation(a, k, queries):
+def circularArrayRotation(a, k, queries,n):
     result = []
     k=k%n
     for q in queries:
@@ -45,3 +45,40 @@ def nonDivisibleSubset(k, s):
     
             
     return maxnum
+
+# https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/
+
+def jumpingOnClouds(c, k):
+    energy = 100
+    i=0
+    while True:
+        if c[i]==1:
+            energy=energy-3
+        else:
+            energy=energy-1
+        i = (i+k)%n
+        if i==0:
+            break
+    return energy
+    
+    # for i in range(len(c)):
+    #     if i+k<len(c):
+    #         a=c[i+k]
+    #     if a==1:
+    #         energy=energy-3
+    #     else:
+    #         energy=energy-1 
+    # if a==c[0]:
+    #     return energy
+
+# https://www.hackerrank.com/challenges/find-digits
+
+def findDigits(n):
+    n=str(n)
+    count=0
+    for i in n:
+        print(i)
+        if int(i)!=0:
+            if int(n)%int(i)==0:
+                count=count+1
+    return count
