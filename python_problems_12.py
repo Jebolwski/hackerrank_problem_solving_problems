@@ -82,3 +82,53 @@ def findDigits(n):
             if int(n)%int(i)==0:
                 count=count+1
     return count
+
+
+# https://www.hackerrank.com/challenges/append-and-delete/
+
+def appendAndDelete(s, t, k):
+    count=0
+    
+    for i,j in zip(s,t):
+        if i==j:
+            count=count+1
+        else:
+            break
+        
+    t_len = len(s)+len(t)
+        
+    if t_len<=2*count+k and t_len%2==k%2 or t_len<k:
+        return "Yes"
+    else:
+        return "No"
+
+# https://www.hackerrank.com/challenges/sherlock-and-squares
+
+def squares(a, b):
+    count=0
+    for i in range(a,b+1):
+        if math.sqrt(i)%1==0:
+            count=count+1
+    return count
+    
+    
+    # if s==t:
+    #     return "Yes"
+    # else:
+    #     array = []
+    #     for i in range(len(s)):
+    #         array.append(s[i])
+    #     for i in range(len(t)):
+    #         array.append(t[i])
+    #     a=0
+    #     while array[a]==array[len(t)+1+a]:
+    #         if len(t)+1+a==len(array):
+    #             break
+    #         array.remove(array[a]) 
+    #         array.remove(array[len(t)+1+a]) 
+    #         a=a+1
+    #         print(array)
+    #     if len(array)<=k:
+    #         return "Yes"
+    #     else:
+    #         return "No"
