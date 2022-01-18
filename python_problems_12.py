@@ -132,3 +132,52 @@ def squares(a, b):
     #         return "Yes"
     #     else:
     #         return "No"
+
+# https://www.hackerrank.com/challenges/extra-long-factorials/
+
+def extraLongFactorials(n):
+    result=1
+    i=1
+    if n==0:
+        return 1
+    else:
+        for i in range(1,n+1):
+            result = result*i
+            i=i+1
+        print(result)
+
+# https://www.hackerrank.com/challenges/library-fine
+
+def libraryFine(d1, m1, y1, d2, m2, y2):
+    if y1<=y2 and m1<m2:
+        return "0"
+    elif y1<y2:
+        return "0"
+    elif d1<=d2 and (m1==m2 or m1<m2) and (y1==y2):
+        return "0"
+    elif d1>d2 and m1==m2 and y1==y2:
+        return abs(d2-d1)*15
+    elif m1>m2 and y1==y2:
+        return abs(m1-m2)*500
+    elif y1>y2:
+        return 10000
+
+# https://www.hackerrank.com/challenges/repeated-string
+
+def repeatedString(s, n):
+    count=0
+    if len(s)==1 and s=="a":
+        return n
+    else:
+        while len(s)<n:
+            s=s+s
+        array=[]
+        for i in range(len(s)):
+            array.append(s[i])    
+        while len(array)>n:
+            array.pop()
+        print(s)
+        for i in range(len(array)):
+            if array[i]=="a":
+                count=count+1
+        return count
