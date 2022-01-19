@@ -181,3 +181,14 @@ def repeatedString(s, n):
             if array[i]=="a":
                 count=count+1
         return count
+
+# https://www.hackerrank.com/challenges/equality-in-a-array
+
+def equalizeArray(arr):
+    c = Counter(arr)
+    return len(arr)-max(c.values())
+
+# https://www.hackerrank.com/challenges/taum-and-bday
+
+def taumBday(b, w, bc, wc, z):
+    return min(w*wc+b*bc,wc*(w+b)+b*z,bc*(b+w)+w*z)
