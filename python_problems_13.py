@@ -45,4 +45,19 @@ def minimumDistances(a):
     else:
         return array1[1]
 
+# https://www.hackerrank.com/challenges/climbing-the-leaderboard
+
+def climbingLeaderboard(ranked, player):
+    ranked=list(set(ranked))
+    ranked.sort()
+    n=len(ranked)
+    i=0
+    result=[]
+    
+    for alscore in player:
+        while n>i and alscore>=ranked[i]:
+            i=i+1
+        result.append(n-i+1)
+    return result
+
         
