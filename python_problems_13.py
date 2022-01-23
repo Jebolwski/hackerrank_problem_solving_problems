@@ -60,4 +60,18 @@ def climbingLeaderboard(ranked, player):
         result.append(n-i+1)
     return result
 
+# https://www.hackerrank.com/challenges/jumping-on-the-clouds
+
+def jumpingOnClouds(c):
+    i=0
+    jump=0
+    while i<len(c)-1:
+        if i+2==len(c) or c[i+2]==1:
+            jump=jump+1
+            i=i+1
+        else:
+            jump=jump+1
+            i=i+2
+    return jump
+
         
