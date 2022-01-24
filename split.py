@@ -11,4 +11,4 @@
 word = 'CatBatSatFatOr'
   
 # Splitting at t
-print(word[2:])
+print(word[len(word)-3:])

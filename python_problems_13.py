@@ -74,4 +74,31 @@ def jumpingOnClouds(c):
             i=i+2
     return jump
 
-        
+# https://www.hackerrank.com/challenges/kaprekar-numbers
+
+def kaprekarNumbers(n, d):
+    a=0
+    array=[]
+    for i in range(1,d+1):
+        if i*i<d:
+            isq=int(i)**2
+            isq=str(isq)
+            print(isq,isq[len(isq)-n])
+            if isq[:len(isq)-n]+isq[len(isq)-n:]==i:
+                array.append(isq)                
+    print(array)
+
+# https://www.hackerrank.com/challenges/halloween-sale    
+
+def howManyGames(p, d, m, s):
+    res = 0
+
+    while s > 0:
+        res += 1
+        s -= p
+        p = max(p - d, m)
+
+    if s != 0:
+        res -= 1
+
+    return res
