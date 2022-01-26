@@ -114,3 +114,26 @@ def insertionSort1(n, arr):
         i=i-1
     arr[i]=key
     print(*arr)
+
+# https://www.hackerrank.com/challenges/cavity-map
+
+def cavityMap(grid):
+    grid = [list(x) for x in grid]
+    
+    for i in range(1,n-1):
+        for j in range(1,n-1):
+            if grid[i][j]>grid[i][j+1] and grid[i][j]>grid[i][j-1] and grid[i][j]>grid[i+1][j] and grid[i][j]>grid[i-1][j]:
+                grid[i][j]="X"
+    return ["".join(x) for x in grid]
+
+# https://www.hackerrank.com/challenges/manasa-and-stones
+
+def stones(n, a, b):
+    array=set()
+    top=max(b,a)*(n-1)
+    for i in range(n):
+        array.add(top)
+        top=(top-abs(a-b))
+    array=sorted(array)
+    return (array)
+    
