@@ -136,4 +136,29 @@ def stones(n, a, b):
         top=(top-abs(a-b))
     array=sorted(array)
     return (array)
+
+# https://www.hackerrank.com/challenges/service-lane/
+
+def serviceLane(n, cases,width):
+    array=[]
+    
+    for i,j in cases:
+        array.append(min(width[i:j+1]))
+        
+    return array
+
+# https://www.hackerrank.com/challenges/lisa-workbook
+
+def workbook(n, k, arr):
+    result = 0
+    page=1
+    
+    for problems in arr:
+        for index in range(1,problems+1):
+            if index==page:
+                result=result+1
+            if index==problems or index%k==0:
+                page=page+1
+                
+    return result
     
