@@ -161,4 +161,83 @@ def workbook(n, k, arr):
                 page=page+1
                 
     return result
+
+# https://www.hackerrank.com/challenges/camelcase/
+
+def camelcase(s):
+    count=1
+    for i in s:
+        if i.isupper():
+            count=count+1
+    return count
+
+# https://www.hackerrank.com/challenges/strong-password
+
+def minimumNumber(n, password):
+    
+    numbers = "0123456789"
+    lower_case = "abcdefghijklmnopqrstuvwxyz"
+    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    special_characters = "!@#$%^&*()-+"
+    low_count=0
+    up_count=0
+    spe_count=0
+    num_count=0
+    
+    for i in password:
+        if i in lower_case:
+            low_count=low_count+1
+        if i in upper_case:
+            up_count=up_count+1
+        if i in special_characters:
+            spe_count=spe_count+1
+        if i in numbers:
+            num_count=num_count+1
+    print("low_count:",low_count,"up_count:",up_count,"spe_count:",                 spe_count,"num_count",num_count)
+    
+    
+    minus=low_count+up_count+spe_count+num_count
+    
+    
+    result=0
+    if num_count<1:
+        result=result+1
+    if low_count<1:
+        result=result+1
+    if up_count<1:
+        result=result+1
+    if spe_count<1:
+        result=result+1
+        
+        
+    if n<6 and 6-n<n:
+        print("1")
+        if spe_count!=0:
+            spe_count=1
+        else:
+            spe_count=0
+            
+            
+        if low_count!=0:
+            low_count=1
+        else:
+            low_count=0
+            
+            
+        if num_count!=0:
+            num_count=1
+        else:
+            num_count=0
+            
+            
+        if up_count!=0:
+            up_count=1
+        else:
+            up_count=0
+        return 6-n+(spe_count+num_count+low_count+up_count)
+    elif n>6:
+        return result
+    else:
+        print("2")
+        return 6-n
     

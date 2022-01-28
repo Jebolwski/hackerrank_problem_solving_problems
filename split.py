@@ -8,7 +8,13 @@
 # # Splits at ','
 # print(word.split(','))
 
-word = 'CatBatSatFatOr'
+# word = 'CatBatSatFatOr'
   
-# Splitting at t
-print(word[len(word)-3:])
+# # Splitting at t
+# print(word[len(word)-3:])
+
+
+a="AliMerb"
+
+for i in a:
+    print(i.isupper())
