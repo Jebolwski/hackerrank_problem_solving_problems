@@ -240,4 +240,13 @@ def minimumNumber(n, password):
     else:
         print("2")
         return 6-n
+
+# https://www.hackerrank.com/challenges/tutorial-intro
+
+def introTutorial(V, arr):
+    for i in arr:
+        if i==V:
+            return arr.index(i)
+
+
     
