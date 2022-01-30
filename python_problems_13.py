@@ -248,5 +248,37 @@ def introTutorial(V, arr):
         if i==V:
             return arr.index(i)
 
+# https://www.hackerrank.com/challenges/runningtime
 
-    
+def runningTime(arr):
+    count=0
+    for step in range(1, len(arr)):
+        key = arr[step]
+        j = step - 1
+        
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j = j - 1
+            count=count+1
+            
+        arr[j + 1] = key
+    return count
+
+# https://www.hackerrank.com/challenges/quicksort1/
+
+def quickSort(arr):
+    p=arr[0]
+    right=[]
+    left=[]
+    total=[]
+    for i in range(1,len(arr)):
+        if arr[i]>p:
+            left.append(arr[i])
+        elif arr[i]<p:
+            right.append(arr[i])
+    for i in right:
+        total.append(i)
+    total.append(p)
+    for j in left:
+        total.append(j)
+    return total
