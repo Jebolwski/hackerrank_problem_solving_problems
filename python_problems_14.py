@@ -30,3 +30,31 @@ def gemstones(arr):
         
         result = result.intersection(temp)
     return len(result)  
+
+# https://www.hackerrank.com/challenges/mars-exploration
+
+def marsExploration(s):
+    help="SOS"
+    count=0
+    for i in range(0,len(s),3):
+        if s[i:i+3][0]!="S":
+            count=count+1
+        if s[i:i+3][1]!="O":
+            count=count+1
+        if s[i:i+3][2]!="S":
+            count=count+1
+
+# https://www.hackerrank.com/challenges/hackerrank-in-a-string/
+
+def hackerrankInString(s):
+    i=0
+    target="hackerrank"
+    for char in s:
+        if target[i]==char:
+            i+=1
+            
+            
+            if i==len(target):
+                return "YES"
+    
+    return "NO"
