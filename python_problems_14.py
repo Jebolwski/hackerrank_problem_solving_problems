@@ -58,3 +58,91 @@ def hackerrankInString(s):
                 return "YES"
     
     return "NO"
+
+# https://codingbat.com/prob/p107863
+
+def lucky_sum(a, b, c):
+  array=[]
+  array.append(a)
+  array.append(b)
+  array.append(c)
+  sum=0
+  for i in range(3):
+    if array[i]==13:
+      break
+    else:  
+      sum=sum+array[i]
+    
+  return sum
+
+# https://codingbat.com/prob/p100347
+
+def no_teen_sum(a, b, c):
+  arr=[]
+  arr.append(a)
+  arr.append(b)
+  arr.append(c)
+  for i in range(3):
+    if 19>=arr[i]>=13 and (arr[i]!=15 and arr[i]!=16):
+      arr[i]=0
+  return sum(arr)
+
+# https://www.hackerrank.com/challenges/pangrams/
+
+def pangrams(s):
+    alphabet=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    arr=[]
+    count=0
+    s=s.lower()
+    for a in alphabet:
+        arr.append(a)    
+    for i in arr:
+        if i in s:
+            count=count+1
+    if count>=26:
+        print(count,"panagram")
+        return "pangram"
+    else:
+        print(count,"not panagram")
+        return "not pangram"
+
+# https://codingbat.com/prob/p129125
+
+def date_fashion(you, date):
+  if you>=8 or date>=8:
+    if you<=2 or date<=2:
+      return 0
+    else:
+      return 2 
+  elif (you<=8 and date<=8) and you>2 and date>2:
+    return 1
+  else:
+    return 0
+
+# https://codingbat.com/prob/p135815
+
+def squirrel_play(temp, is_summer):
+  if is_summer and 100>=temp>=60:
+    return True
+  elif 90>=temp>=60 and not is_summer:
+    return True
+  else:
+    return False
+
+# https://www.hackerrank.com/challenges/caesar-cipher-1
+
+def caesarCipher(s, k):
+    alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a','b','c','d','e']
+    result=''
+    if k==26:
+        return s
+    for i in s:
+        if i in alphabet:
+            rng=alphabet.index(i)+k
+            if rng>=len(alphabet):
+                result+=str(i)
+            a=alphabet[rng]
+            result+=str(a)
+        if i not in alphabet:
+            result+=str(i)
+    return result     
