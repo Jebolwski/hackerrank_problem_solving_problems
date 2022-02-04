@@ -146,3 +146,29 @@ def caesarCipher(s, k):
         if i not in alphabet:
             result+=str(i)
     return result     
+
+# https://codingbat.com/prob/p184853
+
+def big_diff(nums):
+  for i in range(len(nums)):
+    for j in range(i):
+      if nums[j]>nums[i]:
+        nums[i],nums[j]=nums[j],nums[i]
+  return nums[len(nums)-1]-nums[0]
+
+# https://codingbat.com/prob/p108886
+
+def sum67(nums):
+  count=True
+  sum=0
+  
+  for i in range(0,len(nums)):
+    
+    if nums[i]==6:
+      count=False
+    elif count==False and nums[i]==7:
+      count=True
+    elif count==True:
+      sum=sum+nums[i]
+      
+  return sum
