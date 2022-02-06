@@ -32,3 +32,41 @@ def cat_dog(str):
       cat_count=cat_count+1 
 
   return dog_count==cat_count  
+
+# https://codingbat.com/prob/p119308
+
+def has22(nums):
+  for i in range(len(nums)-1):
+    if nums[i]==2 and nums[i+1]==2:
+      return True
+  return False
+
+# https://codingbat.com/prob/p189616
+
+def count_evens(nums):
+  count=0
+  for i in nums:
+    if i%2==0:
+      count=count+1
+  return count
+
+
+# https://codingbat.com/prob/p174314
+
+
+def end_other(a, b):
+  a=a.lower()
+  b=b.lower()
+
+
+  if a in b[len(b)-len(a):] or b in a[len(a)-len(b):]:
+    return True
+  return False
+
+# https://codingbat.com/prob/p149391
+
+def xyz_there(str):
+  for i in range(len(str)-2):
+    if str[i:i+3]=="xyz" and str[i-1]!=".":
+      return True
+  return False
