@@ -110,3 +110,16 @@ def close_far(a, b, c):
   else:
     return True
     
+# https://www.hackerrank.com/challenges/beautiful-binary-string
+
+  def beautifulBinaryString(b):
+    count=0
+    b=str(b)
+    i=0
+    while i<len(b):
+        if b[i:i+3]=="010":
+            count=count+1
+            i=i+3
+        else:
+            i=i+1
+    return count
