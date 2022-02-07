@@ -70,3 +70,43 @@ def xyz_there(str):
     if str[i:i+3]=="xyz" and str[i-1]!=".":
       return True
   return False
+
+# https://codingbat.com/prob/p179960
+
+def make_chocolate(small, big, goal):
+  biggie=1
+  if small+big*5<goal:
+    return -1
+  
+  if big*5<=goal:
+    return goal-big*5
+    
+  while biggie*5<=goal:
+    biggie+=1
+  if goal-5*(biggie-1)<=small:
+    return goal-5*(biggie-1)
+  else:
+    return -1
+
+# https://codingbat.com/prob/p179960
+
+def round10(num):
+  if num%10>=5:
+    return 10-num%10+num
+  else:
+    return num-num%10
+    
+    
+def round_sum(a, b, c):
+  return round10(a)+round10(b)+round10(c)
+
+# https://codingbat.com/prob/p160533
+
+def close_far(a, b, c):
+  if abs(abs(b)-abs(c))<=1 or abs(abs(a)-abs(c))<=1:
+    if a+b+c==8 or a+b+c==9 or a+b+c==23:
+      return True
+    return False
+  else:
+    return True
+    
