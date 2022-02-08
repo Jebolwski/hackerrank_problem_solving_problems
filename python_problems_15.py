@@ -1,3 +1,5 @@
+from collections import Counter
+
 # https://codingbat.com/prob/p170842
 
 def double_char(str):
@@ -123,3 +125,41 @@ def close_far(a, b, c):
         else:
             i=i+1
     return count
+
+# https://codingbat.com/prob/p158497
+
+def in1to10(n, outside_mode):
+  if outside_mode:
+    if 10<=n or n<=1:
+      return True
+    return False
+  else:
+    if 10>=n>=1:
+      return True
+    return False
+
+# https://codingbat.com/prob/p165321
+
+def near_ten(num):
+  if num%10==8 or num%10==9 or num%10==0 or num%10==1 or num%10==2:
+    return True
+  return False
+
+# https://www.hackerrank.com/challenges/making-anagrams
+
+def makingAnagrams(s1, s2):
+    res = 0
+    
+    cnt1 = Counter(s1)
+    cnt2 = Counter(s2)
+    cnt3 = {}
+    
+    for let, val in cnt1.items():
+        cnt3[let] = abs(val - cnt2[let])
+    for let, val in cnt2.items():
+        cnt3[let] = abs(val - cnt1[let])
+        
+    for el in cnt3.values():
+        res += el
+    
+    return res
