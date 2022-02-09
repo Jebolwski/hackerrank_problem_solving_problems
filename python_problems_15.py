@@ -163,3 +163,19 @@ def makingAnagrams(s1, s2):
         res += el
     
     return res
+
+# https://www.hackerrank.com/challenges/palindrome-index/
+
+def palindromeIndex(s):
+    if s==s[::-1]:
+        return -1
+    arr=[]
+    for i in s:
+        arr.append(i)
+    a=arr
+    for i in range(len(arr)):
+        a=a.remove(s[i])
+        if arr==arr[::-1]:
+            print(arr)
+            return i
+        a=arr
