@@ -179,3 +179,27 @@ def palindromeIndex(s):
             print(arr)
             return i
         a=arr
+
+# https://www.hackerrank.com/challenges/big-sorting/
+
+def bigSorting(unsorted):
+    unsorted=list(map(int,unsorted))
+    unsorted.sort()
+    unsorted=list(map(str,unsorted))
+    return unsorted
+
+# https://www.hackerrank.com/challenges/closest-numbers/
+
+def closestNumbers(arr):
+    array=[]
+    array1=[]
+    for i in range(len(arr)):
+        for j in range(i):
+            array.append(abs(arr[i]-arr[j]))
+    array=sorted(array)
+    for i in range(len(arr)):
+        for j in range(i):
+            if abs(arr[i]-arr[j])==array[0]:
+                array1.append(arr[i])
+                array1.append(arr[j])
+    return sorted(array1
