@@ -202,4 +202,4 @@ def closestNumbers(arr):
             if abs(arr[i]-arr[j])==array[0]:
                 array1.append(arr[i])
                 array1.append(arr[j])
-    return sorted(array1
+    return sorted(array1)
