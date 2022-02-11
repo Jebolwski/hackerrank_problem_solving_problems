@@ -1,5 +1,5 @@
 from collections import Counter
-
+import math
 # https://codingbat.com/prob/p170842
 
 def double_char(str):
@@ -203,3 +203,23 @@ def closestNumbers(arr):
                 array1.append(arr[i])
                 array1.append(arr[j])
     return sorted(array1)
+
+# https://www.hackerrank.com/challenges/find-the-median
+
+def findMedian(arr):
+    arr.sort()
+    if len(arr)%2==1:
+        return arr[math.floor(len(arr)/2)]
+    else:
+        return int(arr[math.floor(len(arr)/2)]+arr[math.ceil(len(arr)/2)]/2)
+
+# https://www.hackerrank.com/challenges/the-love-letter-mystery
+
+def theLoveLetterMystery(s):
+    count=0
+    n=len(s)
+    for i in range(len(s)//2):
+        count+=abs(ord(s[i]) - ord(s[n-1-i]))
+        
+    return count
+                
