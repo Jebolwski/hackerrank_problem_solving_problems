@@ -234,3 +234,17 @@ def insertionSort(arr):
                 count=count+1
     return count
         
+# https://www.hackerrank.com/challenges/maximum-perimeter-triangle/
+
+def maximumPerimeterTriangle(sticks):
+    array1=[]
+    sticks.sort()
+    count=0
+    for i in range(len(sticks)-2):
+        arr=sticks[i:i+3]
+        if arr[0]+arr[1]>arr[2] and arr[2]+arr[1]>arr[0] and arr[0]+arr[2]>arr[1]:
+            array1.append(arr)
+            count+=1
+    if count==0:
+        return[-1]
+    return max(array1)
