@@ -248,3 +248,12 @@ def maximumPerimeterTriangle(sticks):
     if count==0:
         return[-1]
     return max(array1)
+
+# https://www.hackerrank.com/challenges/counter-game
+
+def maximizingXor(l, r):
+    array=[]
+    for i in range(l,r+1):
+        for j in range(l,r+1):
+            array.append(i ^ j)
+    return max(array)
