@@ -257,3 +257,19 @@ def maximizingXor(l, r):
         for j in range(l,r+1):
             array.append(i ^ j)
     return max(array)
+
+# https://www.hackerrank.com/challenges/game-of-thrones
+
+def gameOfThrones(s):
+    s=Counter(s)
+    total=0
+    
+    for key,value in s.items():
+        total+=value%2
+        
+    if total>1:
+        return "NO"
+        
+    else:
+        return "YES"            
+            
