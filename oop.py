@@ -23,5 +23,6 @@ class Fights(Fighter):
 
 
 
-Ciryl = Fights("Ciryl Gane",31,"Heavy","6'4","Kickboxing",94,"L-Francis Ngannou","Rozenstruik")
+Ciryl = Fights("Ciryl Gane",31,"Heavy","6'4","Kickboxing",94,"L-Francis Ngannou","Mert")
 print(Ciryl.KO())
+print(Ciryl.name,Ciryl.age,Ciryl.last_fight)
