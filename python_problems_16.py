@@ -79,3 +79,32 @@ for _ in range(int(input())):
         print("YES")
     else:
         print("NO")
+
+# https://www.hackerrank.com/challenges/alternating-characters
+    
+def alternatingCharacters(s):
+    count=0
+    for i in range(len(s)-1):
+        if s[i]==s[i+1]:
+            count=count+1
+    return count
+
+# https://www.hackerrank.com/challenges/icecream-parlor
+
+def icecreamParlor(m, arr):
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[j]+arr[i]==m:
+                return i+1,j+1
+
+# https://www.hackerrank.com/challenges/marcs-cakewalk
+
+def marcsCakewalk(calorie):
+    total=0
+    calorie.sort()
+    calorie.reverse()
+    for i in range(len(calorie)):
+        print("2^",i,"*",calorie[i])
+        total+=(int(math.pow(2,i)))*calorie[i] 
+        print((2^i)*calorie[i],total)
+    return total   
