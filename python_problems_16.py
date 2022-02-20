@@ -108,3 +108,16 @@ def marcsCakewalk(calorie):
         total+=(int(math.pow(2,i)))*calorie[i] 
         print((2^i)*calorie[i],total)
     return total   
+
+# https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/
+
+def minimumAbsoluteDifference(arr):
+    array = []
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            array.append(abs(arr[i]-arr[j]))
+    array.sort()
+    i = 0
+    while array[i]==0:
+        i+=1
+    return array[i+1]
