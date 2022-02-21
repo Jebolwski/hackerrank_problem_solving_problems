@@ -121,3 +121,34 @@ def minimumAbsoluteDifference(arr):
     while array[i]==0:
         i+=1
     return array[i+1]
+
+# https://www.hackerrank.com/challenges/correctness-invariant
+
+def insertion_sort(l):
+    for i in range(len(l)):
+        for j in range(i):
+            if l[j]>l[i]:
+                l[j],l[i]=l[i],l[j]
+
+m = int(input().strip())
+ar = [int(i) for i in input().strip().split()]
+insertion_sort(ar)
+print(" ".join(map(str,ar)))
+
+# https://www.hackerrank.com/challenges/missing-numbers/
+
+def missingNumbers(arr, brr):
+    result=[]
+    result1=[]
+    for i in brr:
+        if i in arr and arr.count(i)==brr.count(i):
+            pass
+        else:
+            result.append(i)
+            
+    for i in result:
+        if i not in result1:
+            result1.append(i)
+            
+    result1.sort()
+    return result1
