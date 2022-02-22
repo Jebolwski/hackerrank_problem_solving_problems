@@ -152,3 +152,48 @@ def missingNumbers(arr, brr):
             
     result1.sort()
     return result1
+
+# https://www.hackerrank.com/challenges/two-strings
+
+def twoStrings(s1, s2):
+    for i in s1:
+        if i in s2:
+            return "YES"
+        return "NO"
+
+# https://www.hackerrank.com/challenges/richie-rich
+
+def highestValuePalindrome(s, n, k):
+    array=[]
+    if len(s)==1:
+        return "9"
+    for i in s:
+        array.append(i)
+    count=0
+    if len(s)%2==1:
+        a=int(math.floor(len(s)/2))
+    else:
+        a=int(len(s)/2)
+    for i in range(a):
+        if array[i]==array[len(s)-i-1]:
+            pass
+        else:
+            count+=1
+            array[len(s)-i-1]="9"
+            array[i]="9"
+    if count>k:
+        return "-1"
+    for i in range(a):
+        if array[i]==array[len(s)-i-1] and array[i]!=9:
+            count+=1
+            array[i]="9"
+            array[len(s)-i-1]="9"
+            print(array,count,k)
+            if count>=k:
+                break
+            
+            
+    arr=""     
+    for i in array:
+        arr+=i   
+    return arr
