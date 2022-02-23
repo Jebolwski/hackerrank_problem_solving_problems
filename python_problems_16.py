@@ -197,3 +197,17 @@ def highestValuePalindrome(s, n, k):
     for i in array:
         arr+=i   
     return arr
+
+# https://www.hackerrank.com/challenges/strange-code/
+
+def strangeCounter(t):
+    array = []
+    num=3
+    temp=num
+    while(len(array)<1500):
+        for i in range(num,0,-1):
+            array.append(num)
+            num=num-1
+        num=temp*2
+        temp=temp*2
+    return array[t-1]
