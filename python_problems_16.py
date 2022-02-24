@@ -211,3 +211,44 @@ def strangeCounter(t):
         num=temp*2
         temp=temp*2
     return array[t-1]
+
+# https://www.hackerrank.com/challenges/chocolate-feast
+
+def chocolateFeast(n, c, m):
+    total = int(n/c);
+    
+    empty_wrapper = total
+    
+    while empty_wrapper >= m:
+        
+        temp = int(empty_wrapper/m)
+    
+        total = total + temp
+        
+        empty_wrapper = empty_wrapper - (temp*m) + temp
+
+    return total
+
+
+# https://www.hackerrank.com/challenges/flatland-space-stations/
+
+def flatlandSpaceStations(n, c):
+    
+    array=[]
+    array1=[]
+    array2=[]
+
+    for i in range(n):
+        array.append(i)
+    for i in c:
+        for j in array:
+            if j in c:
+                array1.append(0)
+            else:
+                for a in range(len(c)):
+                    array2.append(abs(c[a]-j))
+                array1.append(min(array2))
+                array2=[]
+                
+                
+    return max(array1)
