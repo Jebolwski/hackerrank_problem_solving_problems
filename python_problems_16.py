@@ -237,7 +237,6 @@ def flatlandSpaceStations(n, c):
     array=[]
     array1=[]
     array2=[]
-
     for i in range(n):
         array.append(i)
     for i in c:
@@ -252,3 +251,12 @@ def flatlandSpaceStations(n, c):
                 
                 
     return max(array1)
+
+# https://codingbat.com/prob/p189616
+
+def count_evens(nums):
+  count=0
+  for i in nums:
+    if i%2==0:
+      count=count+1
+  return count
