@@ -260,3 +260,71 @@ def count_evens(nums):
     if i%2==0:
       count=count+1
   return count
+
+# https://www.hackerrank.com/challenges/find-a-string/
+
+def count_substring(string, sub_string):
+    count=0
+    
+    for i in range(len(string)):
+        if string[i:i+len(sub_string)]==sub_string:
+            count=count+1
+    return count
+
+# https://www.hackerrank.com/challenges/string-validators
+
+def isalnum(s):
+    count_number=0
+    count_letter=0
+    nums=['0','1','2','3','4','5','6','7','8','9']
+    for i in range(len(s)):
+        if s[i] in nums:
+            count_number=count_letter+1
+        else:
+            count_letter=count_letter+1
+    if count_number>0 and count_letter>0:
+        return "True"
+    return "False"
+def isalpha(s):
+    count=0
+    nums=['0','1','2','3','4','5','6','7','8','9']
+    for i in range(len(s)):
+        if s[i] in nums:
+            return "False"
+        else:
+            if s[i]<s[i+1]:
+                count=count+1
+    if count==len(s):
+        return "True"
+    return "False"
+def isdigit(s):
+    count=0
+    nums=['0','1','2','3','4','5','6','7','8','9']
+    for i in range(len(s)):
+        if i not in nums:
+            count=count+1
+    if count>0:
+        return "True"
+    return "False"
+def islower(s):
+    count=0
+    for i in s:
+        if i.lower()==i:
+            count=count+1
+    if count==len(s):
+        return "True"
+    return "False"
+def isupper(s):
+    count=0
+    for i in s:
+        if i.upper()==i:
+            count=count+1
+    if count==len(s):
+        return "True"
+    return "False"
+
+print(isalnum(s))
+print(isalpha(s))
+print(isdigit(s))
+print(islower(s))
+print(isupper(s))
