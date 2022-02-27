@@ -328,3 +328,24 @@ print(isalpha(s))
 print(isdigit(s))
 print(islower(s))
 print(isupper(s))
+
+# https://www.hackerrank.com/challenges/merge-the-tools
+
+def merge_the_tools(string, k):
+    array = []
+    array1 = []
+    for i in range(0,len(string),k):
+        array.append(string[i:i+k])
+        
+    for i in range(int(len(string)/k)):
+        array1.append([])
+        
+    for i in range(int(len(string)/k)):
+        for j in array[i]:
+            if j not in array1[i]:
+                array1[i].append(j)
+    string=""
+    for i in array1:
+        for j in range(int(len(string)/k)):
+            
+            print(i[0:2])
