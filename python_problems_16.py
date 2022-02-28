@@ -349,3 +349,36 @@ def merge_the_tools(string, k):
         for j in range(int(len(string)/k)):
             
             print(i[0:2])
+
+# https://www.hackerrank.com/challenges/nested-list/
+
+if __name__ == '__main__':
+    scores=[]
+    scores1=[]
+    names=[]
+    total=[]
+    result=[]
+    result1=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        scores.append(score)
+        names.append(name)
+        total.append([name,score])
+    scores.sort()
+    for i in scores:
+        if i not in scores1:
+            scores1.append(i)
+    for i in range(len(total)):
+        for i in range(i):
+            if total[i][1]>total[i+1][1]:
+                total[i],total[i+1]=total[i+1],total[i]
+    
+    
+    for j in range(len(total)):
+        if total[j][1]==scores1[1]:
+            result1.append(total[j][0])
+    result1.sort()
+    for i in result1:
+        print(i)
+        
