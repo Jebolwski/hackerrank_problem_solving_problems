@@ -75,3 +75,21 @@ else:
     result.append((1,int(s[len(s)-1])))
     result.append((1,int(s[len(s)-2])))
 print(*result)
+
+# https://www.hackerrank.com/challenges/capitalize
+
+def solve(s):
+    print(s.split())
+    for i in s.split():
+        s = s.replace(i,i.capitalize())
+    return s
+    
+# https://www.hackerrank.com/challenges/py-set-add/
+
+array = []
+num = input()
+for i in range(int(num)):
+    a = input()
+    if a not in array:
+        array.append(a)
+print(len(array))
