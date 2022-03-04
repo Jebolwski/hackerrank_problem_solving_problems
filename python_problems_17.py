@@ -93,3 +93,23 @@ for i in range(int(num)):
     if a not in array:
         array.append(a)
 print(len(array))
+
+# https://www.hackerrank.com/challenges/text-wrap/
+
+import textwrap
+
+def wrap(string, max_width):
+    return textwrap.fill(string,max_width)
+
+# https://www.hackerrank.com/challenges/exceptions/
+
+a = input()
+for i in range(int(a)):
+    b = input()
+    try:
+        c, b = b.split()
+        print(int(c)//int(b))
+    except ZeroDivisionError as e:
+        print("Error Code:",e)
+    except ValueError as v:
+        print("Error Code:",v)
