@@ -113,3 +113,42 @@ for i in range(int(a)):
         print("Error Code:",e)
     except ValueError as v:
         print("Error Code:",v)
+
+# https://www.hackerrank.com/challenges/py-introduction-to-sets
+
+def average(array):
+    return sum(set(array))/len(set(array))
+
+# https://www.hackerrank.com/challenges/symmetric-difference
+
+m_val = input()
+m = input()
+n_val = input()
+n = input()
+arr=[]
+arr1=[]
+n = n.split()
+m = m.split()
+
+for i in n:
+    if i in m:
+        pass
+    else:
+        arr.append(i)
+        
+for i in m:
+    if i in n:
+        pass
+    else:
+        arr.append(i)
+        
+        
+for i in range(len(arr)):
+    arr[i] =int(arr[i])
+    
+arr.sort()
+for i in arr:
+    if i not in arr1:
+        arr1.append(i)
+for i in arr1:
+    print(i)
