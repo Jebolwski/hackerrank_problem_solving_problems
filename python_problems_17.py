@@ -152,3 +152,21 @@ for i in arr:
         arr1.append(i)
 for i in arr1:
     print(i)
+
+# https://www.hackerrank.com/challenges/python-mod-divmod/
+
+import math
+sayi = input()
+bolen = input()
+print(math.floor(int(sayi)/int(bolen)))
+print(int(sayi)%int(bolen))
+print("("+str(math.floor(int(sayi)/int(bolen)))+",",str(int(sayi)%int(bolen))+")")
+
+# https://www.hackerrank.com/challenges/python-power-mod-power/
+
+a = input()
+b = input()
+m = input()
+
+print(int(a)**int(b))
+print(int(a)**int(b)%int(m))
