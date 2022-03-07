@@ -170,3 +170,40 @@ m = input()
 
 print(int(a)**int(b))
 print(int(a)**int(b)%int(m))
+
+# https://www.hackerrank.com/challenges/python-eval
+
+a = input()
+print(eval(a[6:len(a)-1]))
+
+# https://www.hackerrank.com/challenges/no-idea
+
+n = input()
+m = input()
+A = input()
+B = input()
+
+array=[]
+
+for i in n:
+    array.append(i)
+    
+for j in m:
+    array.append(j)
+    
+while " " in array:
+    array.remove(" ")
+    
+
+count=0
+array = list(set(array))
+
+for i in A:
+    if i in array:
+        count+=1
+
+for j in B:
+    if j in array:
+        count-=1
+
+print(count)
