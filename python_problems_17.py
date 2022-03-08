@@ -207,3 +207,68 @@ for j in B:
         count-=1
 
 print(count)
+
+# https://www.hackerrank.com/challenges/maximize-it
+
+K=input()
+M=input()
+N=input()
+L=input()
+
+arrayL=[]
+arrayK=[]
+arrayM=[]
+arrayN=[]
+
+for i in K.split():
+    i = int(i)
+    arrayK.append(i)
+arrayK.sort()
+k = arrayK[len(arrayK)-1]
+
+for i in N.split():
+    i = int(i)
+    arrayN.append(i)
+arrayN.sort()
+n = arrayN[len(arrayN)-1]**2
+
+
+for i in M.split():
+    i = int(i)
+    arrayM.append(i)
+arrayM.sort()
+m = arrayM[len(arrayM)-1]**2
+
+
+for i in L.split():
+    i=int(i)
+    arrayL.append(i)
+arrayL.sort()
+l = arrayL[len(arrayL)-1]**2
+
+print( m + n + l % k)
+
+# https://www.hackerrank.com/challenges/py-set-intersection-operation/
+
+nums = input()
+a = input()
+another =input()
+b = input()
+arr_a=[]
+arr_b=[]
+array=[]
+
+for i in a.split():
+    arr_a.append(i)
+
+
+    
+for i in b.split():
+    arr_b.append(i)
+
+
+for i in arr_a:
+    if i in arr_b:
+        array.append(i)
+print(len(array))
+    
