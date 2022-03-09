@@ -271,4 +271,16 @@ for i in arr_a:
     if i in arr_b:
         array.append(i)
 print(len(array))
+
+# https://www.hackerrank.com/challenges/py-set-difference-operation/
+
+N1 = int(input())
+storage1 = set(input().split())
+
+N2 = int(input())
+storage2 = set(input().split())
+
+storage3 = storage1.difference(storage2)
+
+print(len(storage3))
     
