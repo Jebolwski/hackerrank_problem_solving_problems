@@ -283,4 +283,31 @@ storage2 = set(input().split())
 storage3 = storage1.difference(storage2)
 
 print(len(storage3))
+
+# https://www.hackerrank.com/challenges/py-set-symmetric-difference-operation
+
+a=input()
+b=input()
+c=input()
+d=input()
+
+
+b=set(b.split())
+d=set(d.split())
+
+print(len(b.symmetric_difference(d)))
+
+# https://www.hackerrank.com/challenges/py-set-union/
+
+a=input()
+b=input()
+c=input()
+d=input()
+
+
+b=set(b.split())
+d=set(d.split())
+
+print(len(b.union(d)))
+    
     
