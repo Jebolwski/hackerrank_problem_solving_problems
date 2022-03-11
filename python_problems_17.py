@@ -309,5 +309,11 @@ b=set(b.split())
 d=set(d.split())
 
 print(len(b.union(d)))
+
+# https://www.hackerrank.com/challenges/input
+
+ui = input().split()
+x = int(ui[0])
+print(eval(input()) == int(ui[1]))
     
     
