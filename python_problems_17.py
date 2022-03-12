@@ -316,4 +316,29 @@ ui = input().split()
 x = int(ui[0])
 print(eval(input()) == int(ui[1]))
     
+# https://www.hackerrank.com/challenges/most-commons/
+
+array=[]
+
+if __name__ == '__main__':
+    s = input()
+    
+for i in s:
+    if i not in array:
+       array.append(i)
+       
+array1=[]
+
+for i in array:
+    array1.append([i,s.count(i)])
+ 
+array1.sort(key = lambda x: (x[1]*-1, x[0]))
+
+while len(array1)>3:
+    array1.remove(array1[len(array1)-1])
+    
+
+
+for i in array1:
+    print(i[0],i[1])
     
